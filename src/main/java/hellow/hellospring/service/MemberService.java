@@ -3,14 +3,18 @@ package hellow.hellospring.service;
 import hellow.hellospring.domain.Member;
 import hellow.hellospring.repository.MemberRepositosy;
 import hellow.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
     public final MemberRepositosy memberRepositosy;
 
+    @Autowired
     public MemberService(MemberRepositosy memberRepositosy) {
         this.memberRepositosy = memberRepositosy;
     }
